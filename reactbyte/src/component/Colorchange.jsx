@@ -16,7 +16,7 @@ function Colorchange() {
         setRed(0);
         setGreen(0);
         setBlue(255);
-    }9
+    }
     const[red,setRed]=useState(0);
     const[green,setGreen]=useState(0);
     const[blue,setBlue]=useState(0);
