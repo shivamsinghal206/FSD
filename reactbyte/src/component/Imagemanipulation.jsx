@@ -7,6 +7,7 @@ function Imagemanipulation() {
     const[red,setRed]=useState(0);
     const[green,setGreen]=useState(0);
     const[blue,setBlue]=useState(0);
+    const[Catangle,setCatangle]=useState(30);
     function increaseheight(){
         setCatheight(catheight+10);
     }
@@ -28,11 +29,14 @@ function Imagemanipulation() {
         setGreen(0);
         setBlue(255);
     }
+    function Imagerotate(){
+        setCatangle(Catangle+10);
+    }
 return (
     <div>
         <h2>Imagemanipulation</h2>
         <div style={{border: '2px solid red',height:'400px',width:'400px',marginLeft:'300px',backgroundColor:`rgb(${red}, ${green}, ${blue})`}}>
-            <img src="https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-cat-on-white-background-png-image_7094927.png" alt="" height={catheight} width={catwidth}/>
+            <img src="https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-cat-on-white-background-png-image_7094927.png" alt="" height={catheight} width={catwidth} style={{transform: `rotate(${Catangle}deg)`}}/>
         </div>
         <div>
             <button onClick={increaseheight}>Increaseheight</button>
@@ -41,7 +45,9 @@ return (
         <div>
             <button onClick={changered}>changered</button>
             <button onClick={changegreen}>changegreen</button>
+
             <button onClick={changeblue}>changeblue</button>
+            <button onClick={Imagerotate}>Imagerotate</button>
         </div>
     </div>
 )
