@@ -8,6 +8,8 @@ import Mystate from './component/Mystate'
 import Colorchange from './component/Colorchange'
 import Name from './component/Name'
 import Imagemanipulation from './component/Imagemanipulation'
+import Myuseffect from './component/Myuseeffect'
+import Fetchproducts from './Fetchproducts'
 import './App.css'
 
 function App() {
@@ -19,7 +21,9 @@ function App() {
       {/* <Mystate/> */}
       {/* <Colorchange/> */}
       {/* <Name/> */}
-      <Imagemanipulation/>
+      {/* <Imagemanipulation/> */}
+      {/* <Myuseffect/> */}
+      <Fetchproducts/>
 
       </div>
   )
