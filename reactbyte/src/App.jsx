@@ -10,11 +10,16 @@ import Name from './component/Name'
 import Imagemanipulation from './component/Imagemanipulation'
 import Myuseffect from './component/Myuseeffect'
 import Fetchproducts from './Fetchproducts'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Login from './component/login'
+import Registration from './component/Registration'
 import './App.css'
+import Dashboard from './component/Dashboard'
+import Home from './component/Home'
 
 function App() {
   return (
-      <div style={{border:'2px solid red', width:'1000px', height:'800px'}}>
+      <div >
       {/* <h2>ABES Engineering College</h2> */}
       
       {/* <Icardgallery></Icardgallery> */}
@@ -23,7 +28,16 @@ function App() {
       {/* <Name/> */}
       {/* <Imagemanipulation/> */}
       {/* <Myuseffect/> */}
-      <Fetchproducts/>
+      {/* <Fetchproducts/> */}
+    <BrowserRouter>
+    <Routes>
+      <Route path='/Login' element={<Login/>}></Route> 
+      <Route path='Registration' element={<Registration/>}></Route>
+      <Route path='/Dashboard' element={<Dashboard/>}></Route>
+      <Route path='/' element={<Home/>}></Route>
+    </Routes>
+    </BrowserRouter>
+
 
       </div>
   )
