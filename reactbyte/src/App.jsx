@@ -11,7 +11,7 @@ import Imagemanipulation from './component/Imagemanipulation'
 import Myuseffect from './component/Myuseeffect'
 import Fetchproducts from './Fetchproducts'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Login from './component/login'
+import Login from './component/Login'
 import Registration from './component/Registration'
 import './App.css'
 import Dashboard from './component/Dashboard'
@@ -31,10 +31,11 @@ function App() {
       {/* <Fetchproducts/> */}
     <BrowserRouter>
     <Routes>
+      <Route path='/' element={<Home/>}>
       <Route path='/Login' element={<Login/>}></Route> 
       <Route path='Registration' element={<Registration/>}></Route>
+      </Route>
       <Route path='/Dashboard' element={<Dashboard/>}></Route>
-      <Route path='/' element={<Home/>}></Route>
     </Routes>
     </BrowserRouter>
 

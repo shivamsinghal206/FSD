@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Outlet,Link } from 'react-router-dom'
 function Home() {
 return (
     <div>
@@ -15,11 +15,9 @@ return (
                 <li>
                     <Link to="/Dashboard">Dashboard</Link>
                 </li>
-                <li>
-                    
-                </li>
             </ol>
         </nav>
+        <Outlet/>
     </div>
 )
 }
